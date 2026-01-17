@@ -206,6 +206,14 @@ footer {
       </a>
     </div>
 
+    <div class="card">
+      <h3>Introdução</h3>
+      <p>Apostila de Contrabaixo.</p>
+      <a href="https://projetostudiowlb.github.io/Apostila-de-Contrabaixo/" target="_blank">
+        Abrir
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -222,36 +230,8 @@ footer {
 
 </div>
 
-<script>
-/* ===== DATA DE LIBERAÇÃO ===== */
-const releaseDate = new Date(2026, 0, 18, 10, 0, 0).getTime();
 
-const countdown = document.getElementById("countdown");
-const lockscreen = document.getElementById("lockscreen");
-const site = document.getElementById("site");
-
-const timer = setInterval(() => {
-  const now = new Date().getTime();
-  const diff = releaseDate - now;
-
-  if (diff <= 0) {
-    clearInterval(timer);
-    lockscreen.style.display = "none";
-    site.style.display = "block";
-    return;
-  }
-
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((diff / (1000 * 60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-
-  countdown.textContent =
-    String(h).padStart(2, "0") + ":" +
-    String(m).padStart(2, "0") + ":" +
-    String(s).padStart(2, "0");
-
-}, 1000);
-</script>
 
 </body>
 </html>
+
